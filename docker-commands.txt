@@ -1,0 +1,11 @@
+## Docker commands used to build the application 
+dockebuild -t alexpereiramaranhao/techtrends:1.0.0 .
+
+## Docker commands used to run the application
+docker run --name=techtrends  -it -p 7111:3111 alexpereiramaranhao/techtrends:1.0.0
+
+## Docker commands used to get the application logs
+docker exec techtrends cat app.log
+
+## Logs from the container running the TechTrends application
+docker logs -f techtrends
