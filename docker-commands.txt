@@ -9,3 +9,58 @@ docker exec techtrends cat app.log
 
 ## Logs from the container running the TechTrends application
 docker logs -f techtrends
+
+## Container log
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.100.33:3111/ (Press CTRL+C to quit)
+INFO:app:/metrics endpoint reached
+INFO:root:total records: <sqlite3.Cursor object at 0x7f68c9b43c00>
+INFO:app:/metrics endpoint returned
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2022 17:39:50] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.100.33:3111/ (Press CTRL+C to quit)
+INFO:app:/metrics endpoint reached
+INFO:root:total records: 1
+INFO:app:/metrics endpoint returned
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2022 17:40:59] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.100.33:3111/ (Press CTRL+C to quit)
+INFO:app:/metrics endpoint reached
+INFO:root:total records: 8
+INFO:app:/metrics endpoint returned
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2022 17:42:07] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:29] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:Post 2020 CNCF Annual Report was retrieved
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:32] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:32] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:34] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:36] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:36] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:A new article This is a nem Post was created.
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:52] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:52] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:Post This is a nem Post was retrieved
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:58] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:04:58] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:05:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:05:07] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:The 'About Us' page was retrieved
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:05:19] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:05:19] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:/metrics endpoint reached
+INFO:app:/metrics endpoint returned
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:06:49] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:07:06] "GET /status HTTP/1.1" 404 -
+INFO:app:/healthz method reached
+INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:07:15] "GET /healthz HTTP/1.1" 200 -
+
+
