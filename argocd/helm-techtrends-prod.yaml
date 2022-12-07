@@ -13,6 +13,6 @@ spec:
       valueFiles:
       - values-prod.yaml
     path: helm
-    repoURL: https://github.com/alexpereiramaranhao/argocd
+    repoURL: https://github.com/alexpereiramaranhao/techtrends
     targetRevision: HEAD
   syncPolicy: {}
