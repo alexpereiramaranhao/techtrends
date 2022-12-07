@@ -1,0 +1,25 @@
+namespace:
+  name: prod
+image:
+  repository: alexpereiramaranhao/techtrends
+  tag: latest
+  pullPolicy: Always  
+replicasCount: 5
+service:
+  port: 7111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+replicaCount: 1
+resources:
+  requests: 
+    memory: 128Mi
+    CPU: 350m
+  limits:
+    memory: 256Mi
+    CPU: 500m  
+containerPort: 3111
+livenessProbe:
+  path: /healthz
+readinessProbe:
+  path: /healthz  

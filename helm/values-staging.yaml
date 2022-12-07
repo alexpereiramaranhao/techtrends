@@ -1,0 +1,25 @@
+namespace:
+  name: staging
+image:
+  repository: alexpereiramaranhao/techtrends
+  tag: latest
+  pullPolicy: Always  
+replicasCount: 3
+service:
+  port: 5111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+replicaCount: 1
+resources:
+  requests: 
+    memory: 90Mi
+    CPU: 300m
+  limits:
+    memory: 128Mi
+    CPU: 500m  
+containerPort: 3111
+livenessProbe:
+  path: /healthz
+readinessProbe:
+  path: /healthz  
