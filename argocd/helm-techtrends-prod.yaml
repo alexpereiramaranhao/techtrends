@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
       - values-prod.yaml
-    path: helm/templates
+    path: helm
     repoURL: https://github.com/alexpereiramaranhao/argocd
     targetRevision: HEAD
   syncPolicy: {}
