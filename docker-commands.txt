@@ -91,3 +91,36 @@ docker run -it -p 7111:3111 --detach alexpereiramaranhao/techtrends:1.0.1
 2022-12-08 02:38:06,473 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:38:06] "GET /static/css/main.css HTTP/1.1" 304 -
 2022-12-08 02:38:18,768 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:38:18] "GET / HTTP/1.1" 200 -
 2022-12-08 02:38:18,833 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:38:18] "GET /static/css/main.css HTTP/1.1" 304 -
+
+In review 02 :
+## Docker commands used to build the application 
+dockebuild -t alexpereiramaranhao/techtrends:1.0.1 .
+
+## Docker commands used to run the application
+docker run -it -p 7111:3111 --detach alexpereiramaranhao/techtrends:1.0.1
+
+## log
+alexmaranhao@sen001167:~/dev/study/cloud-native-app-architecture/fundamentals/my-implementations/techtrends$ docker run -it -p 4111:3111 alexpereiramaranhao/techtrends:latest
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-12-08 13:36:00,666 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-08 13:36:00,666 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-08 13:36:00,667 werkzeug INFO  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2022-12-08 13:36:00,667 werkzeug INFO  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2022-12-08 13:36:09,186 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:09] "GET / HTTP/1.1" 200 -
+2022-12-08 13:36:09,186 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:09] "GET / HTTP/1.1" 200 -
+2022-12-08 13:36:09,226 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:09] "GET /static/css/main.css HTTP/1.1" 200 -
+2022-12-08 13:36:09,226 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:09] "GET /static/css/main.css HTTP/1.1" 200 -
+2022-12-08 13:36:09,313 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:09] "GET /favicon.ico HTTP/1.1" 404 -
+2022-12-08 13:36:09,313 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:09] "GET /favicon.ico HTTP/1.1" 404 -
+2022-12-08 13:36:15,767 app DEBUG Post 2020 CNCF Annual Report was retrieved
+2022-12-08 13:36:15,767 app DEBUG Post 2020 CNCF Annual Report was retrieved
+2022-12-08 13:36:15,788 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:15] "GET /1 HTTP/1.1" 200 -
+2022-12-08 13:36:15,788 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:15] "GET /1 HTTP/1.1" 200 -
+2022-12-08 13:36:15,848 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:15] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-12-08 13:36:15,848 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 13:36:15] "GET /static/css/main.css HTTP/1.1" 304 -
