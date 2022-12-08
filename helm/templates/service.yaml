@@ -4,10 +4,10 @@ metadata:
   name: techtrends-service
   namespace: {{.Values.namespace.name}}
 spec:
-  type: ClusterIP
+  type: {{ .Values.service.type }}
   selector:
     app.kubernetes.io/name: techtrends
   ports:
-    - protocol: TCP
-      port: 4111
-      targetPort: 3111
+    - protocol: {{ .Values.service.protocol }}
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}

@@ -63,4 +63,31 @@ INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:07:06] "GET /status HTTP/1.1" 404 -
 INFO:app:/healthz method reached
 INFO:werkzeug:172.17.0.1 - - [04/Dec/2022 21:07:15] "GET /healthz HTTP/1.1" 200 -
 
+In review 01:
+## Docker commands used to build the application 
+dockebuild -t alexpereiramaranhao/techtrends:1.0.1 .
 
+## Docker commands used to run the application
+docker run -it -p 7111:3111 --detach alexpereiramaranhao/techtrends:1.0.1
+
+## log
+(base) alexmaranhao@sen001167:~/dev/study/cloud-native-app-architecture/fundamentals/my-implementations/techtrends$ docker logs -f b2b61d1e69573e30
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-12-08 02:37:26,869 werkzeug WARNING  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-12-08 02:37:26,870 werkzeug INFO  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2022-12-08 02:37:44,930 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:37:44] "GET / HTTP/1.1" 200 -
+2022-12-08 02:37:44,980 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:37:44] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-12-08 02:37:45,049 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:37:45] "GET /favicon.ico HTTP/1.1" 404 -
+2022-12-08 02:37:52,363 app DEBUG Post KubeCon + CloudNativeCon 2021 was retrieved
+2022-12-08 02:37:52,372 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:37:52] "GET /2 HTTP/1.1" 200 -
+2022-12-08 02:37:52,420 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:37:52] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-12-08 02:38:06,375 app DEBUG The 'About Us' page was retrieved
+2022-12-08 02:38:06,397 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:38:06] "GET /about HTTP/1.1" 200 -
+2022-12-08 02:38:06,473 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:38:06] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-12-08 02:38:18,768 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:38:18] "GET / HTTP/1.1" 200 -
+2022-12-08 02:38:18,833 werkzeug INFO 172.17.0.1 - - [08/Dec/2022 02:38:18] "GET /static/css/main.css HTTP/1.1" 304 -
