@@ -1,5 +1,6 @@
 import sqlite3
 import logging
+import sys
 
 from flask import (
     Flask,
@@ -48,7 +49,7 @@ def index():
     connection.close()
 
     app.config["DB_CONN_COUNTER"] += 1
-    
+
     return render_template("index.html", posts=posts)
 
 
@@ -65,7 +66,7 @@ def post(post_id):
         app.logger.error("PostId %d not found", post_id)
         return render_template("404.html"), 404
     else:
-        app.logger.debug("Post %s was retrieved", post['title'])
+        app.logger.debug("Post %s was retrieved", post["title"])
         return render_template("post.html", post=post)
 
 
@@ -143,6 +144,14 @@ def metrics():
 
 # start the application on port 3111
 if __name__ == "__main__":
-    
-    logging.basicConfig(format='%(asctime)s %(name)s %(levelname)s %(message)s', level=logging.DEBUG)
+
+    stderr_handler = logging.StreamHandler(stream=sys.stderr)
+    stdout_handler = logging.StreamHandler(stream=sys.stdout)
+
+    handlers = [stderr_handler, stdout_handler]
+
+    format_output = "%(asctime)s %(name)s %(levelname)s %(message)s"
+
+    logging.basicConfig(format=format_output, level=logging.DEBUG, handlers=handlers)
+
     app.run(host="0.0.0.0", port="3111")
